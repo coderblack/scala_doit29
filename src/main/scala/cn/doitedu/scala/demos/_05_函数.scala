@@ -35,7 +35,9 @@ object _05_函数 {
 
 
     // TODO 练习，自己为f2这个函数对象 写上  类型名(正统的和语法糖的)
-    val f2 = (p:DoitStu, incr:Int, nickname:String)=>{
+    // f2:Function3[DoitStu,Int,String,Unit]
+    // f2:(DoitStu,Int,String)=>Unit
+    val f2:(DoitStu,Int,String)=>Unit = (p:DoitStu, incr:Int, nickname:String)=>{
       println(nickname + "年龄现在是： " + (p.getAge+incr))
     }
 
