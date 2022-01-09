@@ -59,7 +59,6 @@ object _03_流程控制语法 {
      * for 循环
      * 跟java中的增强for循环类似
      */
-    val seq: immutable.Seq[Int] = 1 to 10
     for (i <- 1 to 10) {
       println(i)
     }

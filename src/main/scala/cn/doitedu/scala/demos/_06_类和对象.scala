@@ -1,6 +1,6 @@
 package cn.doitedu.scala.demos
 
-// 类的定义，直接就是构造方法的定义
+// 类的定义： 类的声明和类的主构造器的声明，一体化了！
 // 加了修饰符 val 的构造参数，自动会被编译成类的final的成员属性,而且,会自动生成该成员属性的“取值方法”,方法名就是 变量名
 // 加了修饰符 val 的构造参数，自动会被编译成类的可修改的成员属性,而且,会自动生成该成员属性的“取值方法”和“设置新值的方法”
 class Teacher(val id:Int,val name:String,var age:Int,course:String){
