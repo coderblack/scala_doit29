@@ -1,0 +1,3 @@
+hello word word scala
+spark hadoop hadoop mapreduce
+doit doit flink flink kafka
