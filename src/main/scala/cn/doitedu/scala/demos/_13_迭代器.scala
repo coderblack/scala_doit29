@@ -39,5 +39,7 @@ object _13_迭代器 {
     println("-----------更简洁的iterable-------------------")
     val list = new SanGuoList
     list.foreach(println)
+
+
   }
 }
