@@ -232,5 +232,6 @@ object _17_Traversable特质上的高阶api {
     val t4: Map[String, Int] = t3.map(tp => (tp._1, tp._2.map(_._2).sum))
     println(t4)
 
+    // haha
   }
 }
