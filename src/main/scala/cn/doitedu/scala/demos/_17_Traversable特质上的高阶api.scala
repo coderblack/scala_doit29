@@ -1,6 +1,7 @@
 package cn.doitedu.scala.demos
 
 import java.sql.DriverManager
+import scala.collection.mutable.ArrayBuffer
 
 object _17_Traversable特质上的高阶api {
   def main(args: Array[String]): Unit = {
@@ -232,6 +233,5 @@ object _17_Traversable特质上的高阶api {
     val t4: Map[String, Int] = t3.map(tp => (tp._1, tp._2.map(_._2).sum))
     println(t4)
 
-    // haha
   }
 }

@@ -32,6 +32,7 @@ object _13_迭代器 {
   def main(args: Array[String]): Unit = {
 
     val iter = SanGuoIterator()
+    
     while (iter.hasNext) {
       println(iter.next())
     }
