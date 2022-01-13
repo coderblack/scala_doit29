@@ -2,7 +2,7 @@ package cn.doitedu.scala.exercise
 
 import java.io.{BufferedReader, FileReader}
 
-object 集合算子练习2 {
+object _4_集合算子练习2 {
 
   def main(args: Array[String]): Unit = {
 
