@@ -119,7 +119,7 @@ object _22_模式匹配 {
 
 
     /**
-     * 6. 模式匹配用作偏函数
+     * 6. 模式匹配用作偏函数（部分函数）
      */
     val intList = List(1,2,3,4,5,6)
     val res1 = intList.filter(e=>e%2==0).map(e=>e*10)  // 收集到原来的list中的所有偶数*10
@@ -129,8 +129,9 @@ object _22_模式匹配 {
       override def apply(x: Int): Int = x * 10   // 变换逻辑
     }
     val res2 = intList.collect(pf)  // collect 调偏函数的时候，就是先调过滤条件判断这个值是要还是不要；然后调apply做运算
+
     /**
-     * 偏函数的语法糖
+     * 偏函数的语法糖，直接用{case .. => ..}来表示偏函数
      */
     val res3 = intList.collect({
       // if守卫，就相当于正统写法中的 idDefinedAt
@@ -139,6 +140,13 @@ object _22_模式匹配 {
     })
     println(res3)
 
+    /**
+     * 也可以给偏函数定义一个变量名来使用
+     */
+    val pf2: PartialFunction[Int,Int] = {
+      case x if(x%2==0)=> x*10
+    }
+    intList.collect(pf2)
 
   }
 }
