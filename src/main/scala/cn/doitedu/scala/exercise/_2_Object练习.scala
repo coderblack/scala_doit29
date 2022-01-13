@@ -23,7 +23,7 @@ object Exercise{
 
 }
 
-object Ojbect练习 {
+object Object练习 {
   def main(args: Array[String]): Unit = {
     println(Exercise.add(10, 20))
     println(Exercise.add(10, 200))
