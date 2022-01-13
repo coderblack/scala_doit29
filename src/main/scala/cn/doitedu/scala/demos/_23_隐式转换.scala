@@ -1,5 +1,7 @@
 package cn.doitedu.scala.demos
 
+import scala.language.implicitConversions
+
 object _23_隐式转换 {
   def main(args: Array[String]): Unit = {
 
@@ -52,10 +54,24 @@ object _23_隐式转换 {
      * 模仿上面的语法： 让整数可以直接调 concat 方法
      */
     val ele:Int = 5
-    ele.concat("haha")
+    implicit def int2Str(e:Int) = s"${e}nb "
+    println(ele.concat("haha"))
 
+    /**
+     * 隐式类 : 类名前加implicit修饰，它的主构造器能接收一个A类型的值，返回一个B类型
+     *
+     * 那么，在A类型的对象上，就可以直接调B类型的方法
+     *
+     */
+    class Ant
 
-
+    implicit class Snake(ant:Ant){
+      def eatElephant(): Unit ={
+        println("谁说我吃不了大象？")
+      }
+    }
+    val ant = new Ant()
+    ant.eatElephant()  // 编译器会把ant传入Snake的构造器，得到一个Snake对象，然后调eatElephant方法
 
   }
 }
