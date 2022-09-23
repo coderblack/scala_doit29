@@ -21,7 +21,10 @@ object _14_比较器 {
 
     val seq = List(e1, e2, e3, e4).toArray
 
-    Sorting.quickSort(seq)(new MyOrdering)
+    /*Sorting.quickSort(seq)(new MyOrdering)*/
+
+
+    //seq.sorted
 
 
   }
